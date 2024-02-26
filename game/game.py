@@ -1,5 +1,5 @@
+from .player import Player
 
-from player import Player
 
 class Game:
     def __init__(self):
@@ -8,22 +8,28 @@ class Game:
         self.players = []
         print("Game created")
         
-
-
-    def register(self, player1: Player):
-        self.players.append(player1)
+    def register(self, name):
+        player = Player(name)
+        self.players.append(player)
         self.playerNumber += 1
-        print("Player {player1.name} registered")
+        print("Player " + player.name + " registered")
         return self.players
 
-    def launchGame(self):
-        if self.playerNumber == 6:
-            isLaunch = True
-        return isLaunch
+    def launchGame(self, numberPlayers):
+        if self.playerNumber == numberPlayers:
+            self.isLaunch = True
+        return self.isLaunch
     
     def display(self):
         return { 'type': 'Game', 'playerNumber': self.playerNumber, 'isLaunch': self.isLaunch, 'players': self.players }
     
+    def drawCards(self):
+        for player in self.players:
+            print("Player " + player.name + " draw a card")
+            player.deck.append(self.deck.cards.pop())
+
+
+
     def round(self):
         if self.isLaunch:
             print("Game is launched")

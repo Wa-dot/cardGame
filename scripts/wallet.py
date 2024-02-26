@@ -1,5 +1,4 @@
-from helper import cryptography
-from json import dumps, loads
+from scripts.helpers import cryptography
 
 class Wallet:
     

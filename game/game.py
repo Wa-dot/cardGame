@@ -62,7 +62,8 @@ class Game:
         maxCardValue = max(cardValue)
         indexWinner = cardValue.index(maxCardValue)
         cardWinner = self.cardsSelected[indexWinner]
-        print("Winner is " + str(cardWinner.value) + " with " + str(sum(cardValue)) + " points")
+        print("\nWinner is " + str(cardWinner.value) + " with " + str(sum(cardValue)) + " points")
+        self.cardsSelected.clear()
         return sum(cardValue), cardWinner, indexWinner
 
 

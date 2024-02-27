@@ -1,17 +1,31 @@
 import random
 
 class Card:
-    def __init__(self, value):
-        self.value = value
-
-
-class Deck(Card):
     def __init__(self):
-        startCardNumber = 10
+        self.value = 0
+        self.createCard()
+
+    def createCard(self):
+        self.value = random.randint(1, 60)
+        return self.value
+    
+    def display(self):
+        return { 'type': 'Card', 'value': self.value }
+
+
+class Deck:
+    def __init__(self):
         self.cards = []
-        for card in range(startCardNumber):
-            #Card has a random value between 1 and 60
-            for i in range(1, startCardNumber):
-                self.cards.append(Card(random.randint(1, 60)))
+    
+    def createDeck(self, numberCardToDraw):
+        for card in range(numberCardToDraw):
+            # Card has a random value between 1 and 60
+            self.cards.append(Card())
+            print("Card value : "+ str(self.cards[card].value))
         print(self.cards)
+
+
+    def showCards(self):
+        for card in self.cards: 
+            print("Carte "+ str(self.cards.index(card))+ ' : ' + str(card.value))
         

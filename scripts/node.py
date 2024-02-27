@@ -1,8 +1,8 @@
-from network import Node
-from certificate import Certificate
-from blockchain import Blockchain
-from buffer import BlockBuffer
-from block import Block
+from .network import Node
+from .certificate import Certificate
+from .blockchain import Blockchain
+from .buffer import BlockBuffer
+from .block import Block
 
 class BlockchainNode(Node):
     

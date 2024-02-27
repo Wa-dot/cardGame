@@ -1,5 +1,5 @@
-from helpers import cryptography
-from block import Block
+from .helpers import cryptography
+from .block import Block
 
 class Blockchain:
     

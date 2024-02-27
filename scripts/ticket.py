@@ -1,5 +1,5 @@
 from json import dumps
-from helpers import cryptography
+from .helpers import cryptography
 
 class RaffleTicket:
     

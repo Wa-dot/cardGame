@@ -1,4 +1,4 @@
-from helpers import timestamp, cryptography
+from .helpers import timestamp, cryptography
 from json import dumps
 
 class Certificate:

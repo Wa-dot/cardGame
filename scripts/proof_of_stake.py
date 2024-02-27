@@ -1,5 +1,5 @@
-from stake import StakingOperation
-from ticket import RaffleTicket
+from .stake import StakingOperation
+from .ticket import RaffleTicket
 
 class ProofOfStake:
     

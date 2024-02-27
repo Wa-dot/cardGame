@@ -1,4 +1,4 @@
-from certificate import Certificate
+from .certificate import Certificate
 
 class SmartContractDefinition(Certificate):
     
